@@ -94,10 +94,34 @@ def draw_house():
     
     penup()
 
-draw_house()
-goto(100, 100)
-draw_house()
-goto(200, 0)
-draw_house()
-goto(100, -100)
-draw_house()
+# draw_house()
+# goto(100, 100)
+# draw_house()
+# goto(200, 0)
+# draw_house()
+# goto(100, -100)
+# draw_house()
+
+# classes
+class Player:
+    def __init__(self, name, age):
+        self.name = 'unknown'
+        self.age = 0
+        self.score = 0
+    
+    def print_stats(self):
+        print(f'Name: {self.name}')
+        print(f'Age: {self.age}')
+        print(f'Score: {self.score}')
+        
+    def score_points(self, score):
+        self.score += score
+        
+player1 = Player('Lucy', 11)
+player1.score_points(8)
+
+player2 = Player('Bobby', 40)
+player2.score_points(22)
+
+player1.print_stats()
+player2.print_stats()
